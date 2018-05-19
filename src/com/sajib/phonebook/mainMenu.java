@@ -58,7 +58,21 @@ public class mainMenu {
 				int contactNumber = inp.nextInt();
 					statements.addContact(loginUser, contactName, contactNumber);
 					break;
-				case 2: break;
+				case 2:System.out.println("Do you want to change the contact name or number?\n 1. Change name\n 2. Change number");
+				int selection1 = inp.nextInt();
+				if (selection1 == 1){
+					System.out.println("Input the contact name, and new contact name");
+					String oldContactname = inp.next();
+					String newContactname = inp.next();
+					statements.editContactName(loginUser, oldContactname, newContactname);
+				}
+				else if(selection1 == 2) {
+					System.out.println("Input the contact name and the new contact number");
+					String selectContactName = inp.next();
+					int newContactNumber = inp.nextInt();
+					statements.editContactNumber(loginUser, selectContactName, newContactNumber);
+				}
+				break;
 				case 3: break;
 				case 4: break;
 				case 5: break;
