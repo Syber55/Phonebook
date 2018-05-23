@@ -72,8 +72,14 @@ public class mainMenu {
 					int newContactNumber = inp.nextInt();
 					statements.editContactNumber(loginUser, selectContactName, newContactNumber);
 				}
+				else {
+					System.out.println("Wrong input, returning to main menu");
+				}
 				break;
-				case 3: break;
+				case 3:System.out.println("Input the name of the contact you wish to delete");
+				String deletedUser = inp.next();
+				statements.deleteContact(loginUser, deletedUser);
+					break;
 				case 4: break;
 				case 5: break;
 				case 6: System.out.println("Goodbye");
@@ -84,5 +90,4 @@ public class mainMenu {
 			}
 		}
 
-	}
-}
+	}}
